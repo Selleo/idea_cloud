@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_07_05_114100) do
 
   create_table "quotes", force: :cascade do |t|
     t.string "label", null: false
-    t.integer "position", null: false
+    t.integer "score", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,11 +1,11 @@
 class Quote < ApplicationRecord
-  before_validation :set_position
+  before_validation :set_score, on: :create
 
   validates :label, presence: true
 
   private
 
-  def set_position
-    self.position = (Quote.maximum(:position) || 0) + 1
+  def set_score
+    self.score = (Quote.maximum(:score) || 0) + 1
   end
 end
